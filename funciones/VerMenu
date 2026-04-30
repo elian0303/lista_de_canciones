@@ -1,0 +1,13 @@
+<?php
+echo "1. Agregar cancion\n";
+echo "2. Ver lista\n";
+$opcion = readline("Elige una opcion: ");
+
+function imprimimenu(){
+    echo "1. Agregar cancion\n";
+    echo "2. Ver lista\n";
+    $opcion = readline("Elige una opcion: ");
+}
+
+
+

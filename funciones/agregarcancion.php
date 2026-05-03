@@ -1,16 +1,29 @@
-<?php 
+<?php
 
-function agregarCancion(&$canciones) { 
-    $titulo = readline("Titulo: ");
-    $artista = readline("Artista: ");
-    $album = readline("Album: ");
-    $favorita = readline("favorita: ");
+function agregarCancion(&$canciones) {
+
+    echo "\n===== AGREGAR CANCIÓN =====\n";
+
+    echo "Título: ";
+    $titulo = readline();
+
+    echo "Artista: ";
+    $artista = readline();
+
+    echo "Álbum: ";
+    $album = readline();
+
+    $id = count($canciones) + 1;
+
     $canciones[] = [
-        "id" => count($canciones) + 1,
+        "id" => $id,
         "titulo" => $titulo,
-        "artista" => $artista,
-        "favorita" => $favorita,
+                "artista" => $artista,
         "album" => $album
     ];
-} 
 
+    echo "\nCanción agregada correctamente\n";
+
+    echo "Presiona Enter para continuar...";
+    readline();
+    }
